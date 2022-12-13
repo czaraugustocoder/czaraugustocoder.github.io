@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./casino.css">
+    <title>Destaques</title>
+</head>
+<body>
+    <header>
+        <h1>CESAR AUGUSTO</h1>
+        <nav id="menu">
+            <a href="../../index.html">Blog</a>
+            <a href="../../perfil.html">Sobre mim</a>
+        </nav>
+    </header>
+    <main>
+        <div id="image" >
+            <img src="./capa.jpg" alt="capa do artigo - casino" >
+        </div>
+        <h2>Esperaça Matemática - Como saber se um jogo é justo ou não</h2>
+        <div id="texto" >
+            <p>
+                Tem uma cena no filme Casino, um dos melhores filmes da carreira do mestre Scorsese, em que Sam Rothstein 
+                "Ace" (Robert De Niro) fala: "O Cassino sempre ganha, os jogadores não tem a menor chance". Essa frase tem fundamento ou é apenas uma boa frase de efeito ?
+            </p>
+            <p>
+                Para entender como cassinos ganham dinheiro com jogos de azar é necessário compreender a 
+                <strong>Lei dos Grandes Números</strong> e a <strong>Esperança Matemática</strong>.
+            </p>
+            <h3>Esperança Matemática</h3>
+            <p>
+                A grosso modo, a Esperança Matemática é o somatório do produto das probabilidades de um evento 
+                com o seu respectivo valor, acompanhe o seguinte exemplo:<br><br>
+                Imagine que você está apostando em corrida de cavalos, seu cavalo tem 60% de chance de ganhar e caso ele ganhe 
+                você recebe um prêmio de R$ 100,00, caso perca, você não recebe nada. Aplicando a fórmula da Esperança Matemática, temos:<br><br>
+                Valor Esperado = (60/100 x 100) + (40/100 x 0)<br>
+                Valor Esperado = 60<br><br>
+                O Valor Esperado não é o valor que você espera ganhar, mas sim o quanto você ganhará, em média, caso jogue muitas vezes.
+            </p>
+            <h3>Lei dos Grandes Números</h3>
+            <p>
+                A lei dos grandes números é um teorema que nos diz que quanto maior o número de tentativas de um evento, 
+                mais os resultados se aproximarão do valor esperado.<br><br>
+                Pense novamente na corrida de cavalos, e que você precisa pagar R$ 20,00 para participar, você faz 100 apostas 
+                e ganha 60% delas, em termos monetários, você ganharia:<br><br>
+                Receita das apostas -> 60 apostas vencidas x 100 reais ganhados por aposta vencida = R$ 6.000,00 <br>
+                Custo das apostas -> 20 reais de valor de custo de cada aposta x 100 apostas realizadas = R$ 2.000,00<br>
+                Lucro das apostas -> 6.000 - 2.000 = R$ 4.000,00<br><br>
+                Todo esse cálculo pode ser simplificado utilizando o artifício do valor esperado, 
+                o valor esperado calculado para a corrida de cavalo é 60, ou seja, o retorno médio para um número 
+                considerável de apostas é R$ 60,00, pensando nos custos por aposta, teremos um retorno líquido (receita - custo) de R$ 40,00.
+            </p>
+            <p>
+                E o que isso tudo tem a ver com cassinos ? O Valor esperado dos jogos dos cassinos 
+                são todos negativos, ou seja, a longo prazo, segundo a lei dos grandes números, os resultados 
+                convergem para a média, como o valor esperado dos jogos é negativo, os jogadores tendem a perder dinheiro. No longo 
+                prazo, o cassino sempre ganha.
+            </p>
+        </div>
+    </main>
+    <footer>
+        Desenvolvido por Cesar Augusto Andrade Ferreira
+    </footer>  
+</body>
+</html>

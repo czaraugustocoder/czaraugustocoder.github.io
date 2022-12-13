@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
+
+* {
+    background-color: white;
+    font-family: 'Rosario', sans-serif;
+}
+
+body {
+    margin: 0px;
+    background-color: #F0F1F2;
+}
+
+header {
+    padding: 5px 0px 0px 0px;
+    background-color: white;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#menu {
+    background-color: #000000;
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+    text-align: right;
+}
+
+header > #menu  > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 2px;
+    padding: 0px 6px 0px 0px;
+    background-color: #000000;
+}
+
+
+header > #menu  > a:hover{
+    text-decoration: underline;
+}
+
+main {
+    background-color: white;
+    margin: 5px auto 5px auto;
+    padding: 15px;
+    min-height: 450px;
+    min-width: 320px;
+    max-width: 800px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px rgb(54, 54, 54);
+}
+
+#image {
+    max-width: 580px;
+    min-width: 320px;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+#texto {
+    max-width: 600px;
+    min-width: 320px;
+    margin: auto;
+}
+
+p {
+    text-align: justify;
+}
+
+footer {
+    background-color: #000000;
+    height: 40px;
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    bottom: 0;
+    color: white;
+    flex-shrink: 0;
+}
