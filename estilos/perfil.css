@@ -61,6 +61,8 @@ header > #menu  > a:hover{
 #texto-foto {
     display: flex;
     flex-direction: row;
+    min-width: 320px;
+    max-width: 640px;
 }
 
 #texto-foto > p {
