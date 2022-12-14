@@ -9,27 +9,12 @@ body {
     margin: 0px;
     background-color: #F0F1F2;
     min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
 }
 
 header {
     padding: 5px 0px 0px 0px;
     background-color: white;
     margin: 0px;
-}
-
-main {
-    background-color: white;
-    margin: 5px;
-    padding: 10px;
-    height: 450px;
-    max-width: 800px;
-    min-width: 320px;
-    margin: auto;
-    border-radius: 2px;
-    box-shadow: 0px 0px 2px rgb(54, 54, 54);
 }
 
 h1 {
@@ -87,7 +72,7 @@ main {
 }
 
 #redes-sociais { 
-    margin-top: 50px;
+    margin-top: 25px;
     display: block;
     text-align: center;
 }
