@@ -58,20 +58,37 @@ header > #menu  > a:hover{
     text-decoration: underline;
 }
 
-#texto-foto {
-    display: flex;
-    flex-direction: row;
+main {
+    background-color: white;
+    margin: 5px auto 5px auto;
+    padding: 15px;
+    min-height: 450px;
     min-width: 320px;
-    max-width: 640px;
+    max-width: 800px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px rgb(54, 54, 54);
+
 }
 
-#texto-foto > p {
-    text-align: left;
-    margin-left: 10px;
+#perfil {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.08px;
+    border-bottom: #575757;
+    width: 100%;
+}
+
+#imagem {
+    max-width: 180px;
+    min-width: 120px;
+    margin: auto;
 }
 
 #redes-sociais { 
     margin-top: 50px;
+    display: block;
     text-align: center;
 }
 
