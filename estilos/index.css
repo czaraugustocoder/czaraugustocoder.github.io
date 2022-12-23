@@ -69,13 +69,13 @@ main {
 
 div {
     background-color: whitesmoke;
-    margin: 15px auto 15px auto;
+    margin: 20px auto 20px auto;
     padding: 10px;
-    border-radius: 10px;
     box-shadow: 0px 0px 4px rgb(36, 36, 36);
     min-width: 320px;
     max-width: 640px;
 }
+
 
 div a {
     color: black;
@@ -88,6 +88,10 @@ div a:hover {
 
 div a , h2, p {
     background-color: whitesmoke;
+}
+
+div:hover {
+    box-shadow: 0px 0px 10px rgb(19, 19, 19);
 }
 
 footer {
