@@ -70,6 +70,10 @@ main {
     margin: auto;
 }
 
+p {
+    text-align: justify;
+}
+
 #redes-sociais { 
     margin-top: 25px;
     display: block;
