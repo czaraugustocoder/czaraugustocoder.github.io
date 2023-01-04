@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Android';
+    src: url('./pacote-projeto-d010/fontes/idroid.otf')
+    format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'bebinha';
+    src: url('./pacote-projeto-d010/fontes/BebasNeue-Regular.ttf')
+    format('opentype');
+    font-weight: normal;
+}
+
+/*
+CORES
+#c5ebd6
+#83e1ad
+#2fa866
+#1a5c37
+#063die
+*/
+
+/* Definindo variáveis na raiz do documento*/
+
+:root {
+    --cor0: #025fb1;
+    --cor1: #F2F2F2;
+
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-destaque: 'Android';
+    --fonte-beba: 'bebinha';
+}
+
+/* Configurações Globais */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(177, 177, 177);
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-color: white;
+    min-height: 135px;
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    box-shadow: 0px 2px 2px rgb(58, 58, 58);
+}
+
+
+nav {
+    background-color: white;
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+nav a {
+    margin-left: 7px;
+    text-decoration: none;
+    color:var(--cor0);
+    font-family: var(--fonte-padrao);
+    padding: 10px;
+    font-weight: bold;
+    transition-duration: 0.45s;
+}
+
+nav a:hover {
+    background-color: var(--cor3);
+    color:var(--cor5);
+    border-radius: 2px;
+}
+
+#box_selector {
+    background-color: rgb(39, 43, 255);
+    height: 50px;
+    max-width: 875px;
+    margin: 15px auto 5px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+h4 {
+    margin-left: 5px;
+    margin-top: 4px;
+    color: white;
+    height: 35px;
+}
+
+#crimes {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    height: 35px;
+}
+
+#big_box {
+    background-color: rgb(177, 177, 177);
+    width: 875px;
+    height: 492px;
+    margin: 10px auto 10px auto;
+    padding: 0px;
+}
+
+#box {
+    margin: 0px;
+    background-color: white;
+    max-width: 710px;
+    height: 480px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px black;
+    padding: 8px 4px 4px 4px;
+    display: inline-block;
+}
+
+#box_aside {
+    margin: 0px;
+    background-color: white;
+    width: 180px;
+    height: 492px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px black;
+    display: inline-block;
+}
+
+.little_box {
+    width: 170px;
+    height: 115px;
+    margin: 6px auto 6px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px black;
+}
+
+.linha {
+    display: table;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-block-start: 0px;
+}
+
+.indicador {
+    color:  rgb(39, 43, 255);
+    display: table;
+    font-size: 20px;
+    margin-inline-start: 10px;
+    margin-block-end: 25px;
+    margin-block-start: 12px;
+}
+
+#maximo {
+    color:  black;
+    display: table;
+    font-size: 18px;
+    margin-inline-start: 10px;
+    margin-block-end: 25px;
+    margin-block-start: 12px;
+}
+
+#minima {
+    color:  black;
+    display: table;
+    font-size: 18px;
+    margin-inline-start: 10px;
+    margin-block-end: 25px;
+    margin-block-start: 12px;
+}
+
+#medM {
+    color:  black;
+    display: table;
+    font-size: 18px;
+    margin-inline-start: 10px;
+    margin-block-end: 25px;
+    margin-block-start: 12px;
+}
+
+#acumulado {
+    color:  black;
+    display: table;
+    font-size: 18px;
+    margin-inline-start: 10px;
+    margin-block-end: 25px;
+    margin-block-start: 12px;
+}
+
+#myChart {
+    background-color: whitesmoke;
+    margin: auto;
+    height: 480px;
+}
+
+img {
+    width: 180px;
+    display: block;
+    margin-left: 10px;
+}
+
+footer {
+    background-color: var(--cor1);
+    color: black;
+    height: 40px;
+    box-shadow: 2px 0px 2px rgb(58, 58, 58);
+    padding-top: 8px;
+}

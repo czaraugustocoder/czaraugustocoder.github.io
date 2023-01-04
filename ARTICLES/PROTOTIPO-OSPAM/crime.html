@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatística Criminais - Amazonas</title>
+    <link rel="shortcut icon" href="./pacote-projeto-d010/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="crime.css">
+</head>
+<body>
+    <header>
+        <img src="./LOGO-OSPAM.png" alt="logotipo">
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">PUBLICAÇÕES</a>
+            <a href="#">DADOS</a>
+            <a href="#">SOBRE NÓS</a>
+        </nav>
+    </header>
+    <main>
+        <div id="box_selector">
+            <h4>Estatísticas Criminais - Amazonas</h4>
+            <select name="crimes" id="crimes" onchange="submit(this)">
+                <option value="ROUBO">ROUBO</option>
+                <option value="LATROCINIO">LATROCÍNIO</option>
+                <option value="FURTO">FURTO</option>
+                <option value="HOMICIDIO">HOMICÍDIO</option>
+                <option value="FEMINICIDIO">FEMINICÍDIO</option>
+                <option value="ESTUPRO">ESTUPRO</option>
+              </select>
+        </div>
+        <div id="big_box">
+            <div id="box">
+                <div id="myChart" style="width:100%;max-width:680px"></div>
+            </div>
+            <div id="box_aside">
+                <div class="little_box" >
+                    <h6 class="linha"></h6>
+                    <h6 class="indicador" >Máxima</h6>
+                    <h6 id="maximo" ></h6>
+                </div>
+                <div class="little_box" >
+                    <h6 class="linha"></h6>
+                    <h6 class="indicador" >Mínima</h6>
+                    <h6 id="minima" >JAN-21</h6>
+                </div>
+                <div class="little_box" >
+                    <h6 class="linha"></h6>
+                    <h6 class="indicador" >Média mensal</h6>
+                    <h6 id="medM" ></h6>
+                </div>
+                <div class="little_box" >
+                    <h6 class="linha"></h6>
+                    <h6 class="indicador" >Acumulado</h6>
+                    <h6 id="acumulado" >JAN-21</h6>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        OPP
+    </footer> 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="CRIMES_MANAUS_2019-2021.js" ></script>
+    <script src="crime.js" ></script> 
+</body>
+</html>
