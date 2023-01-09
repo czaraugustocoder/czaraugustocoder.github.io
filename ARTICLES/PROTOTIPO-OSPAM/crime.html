@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <img id="logo" src="./imagens/LOGO-OSPAM.png" alt="logotipo">
+        <img id="logo" src="./imagens/logo-oficial-ospam.PNG" alt="logotipo">
         <nav id="nav-menu">
             <button id="btn-mobile" >MENU</button>
             <ul id="menu" >
@@ -22,7 +22,10 @@
         </nav>
     </header>
     <main>
-        <img id="capa_site" src="./imagens/banner_site_home.png">
+        <picture>
+            <source media="(max-width: 600px)" srcset="./imagens/banner_site_pequeno_home.png" >
+            <img id="capa_site" src="./imagens/banner_site_home.png">
+        </picture>
         <div id="box_content">
             <div id="box_card" >
                 <img class="image_card" src="./imagens/about.png">
