@@ -10,50 +10,40 @@
 </head>
 <body>
     <header>
-        <img src="./LOGO-OSPAM.png" alt="logotipo">
-        <nav>
-            <a href="#">HOME</a>
-            <a href="#">PUBLICAÇÕES</a>
-            <a href="#">DADOS</a>
-            <a href="#">SOBRE NÓS</a>
+        <img id="logo" src="./imagens/LOGO-OSPAM.png" alt="logotipo">
+        <nav id="nav-menu">
+            <button id="btn-mobile" >MENU</button>
+            <ul id="menu" >
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PUBLICAÇÕES</a></li>
+                <li><a href="./dados/dados.html">DADOS</a></li>
+                <li><a href="#">SOBRE NÓS</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <div id="box_selector">
-            <h4>Estatísticas Criminais - Amazonas</h4>
-            <select name="crimes" id="crimes" onchange="submit(this)">
-                <option value="ROUBO">ROUBO</option>
-                <option value="LATROCINIO">LATROCÍNIO</option>
-                <option value="FURTO">FURTO</option>
-                <option value="HOMICIDIO">HOMICÍDIO</option>
-                <option value="FEMINICIDIO">FEMINICÍDIO</option>
-                <option value="ESTUPRO">ESTUPRO</option>
-              </select>
-        </div>
-        <div id="big_box">
-            <div id="box">
-                <div id="myChart" style="width:100%;max-width:680px"></div>
+        <img id="capa_site" src="./imagens/banner_site_home.png">
+        <div id="box_content">
+            <div id="box_card" >
+                <img class="image_card" src="./imagens/about.png">
+                <img class="image_card" src="./imagens/publish.png">
+                <a href="./dados/dados.html"><img class="image_card" src="./imagens/dados.png"></a>
             </div>
-            <div id="box_aside">
-                <div class="little_box" >
-                    <h6 class="linha"></h6>
-                    <h6 class="indicador" >Máxima</h6>
-                    <h6 id="maximo" ></h6>
+            <h2>ÚLTIMAS PUBLICAÇÕES</h2>
+            <div class="relatory_box">
+                <img class="relatory" src="./imagens/capa_relatorio_modelo.png">
+                <div class="relatory_text">
+                    <h4>Relatório - OSPAM N° 01</h4>
+                    <h5>06/01/2023</h5>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iusto dolorem provident laudantium eveniet ipsa qui porro fuga possimus saepe recusandae doloremque, ea non incidunt illum unde laborum repudiandae consequatur.</h6>
                 </div>
-                <div class="little_box" >
-                    <h6 class="linha"></h6>
-                    <h6 class="indicador" >Mínima</h6>
-                    <h6 id="minima" >JAN-21</h6>
-                </div>
-                <div class="little_box" >
-                    <h6 class="linha"></h6>
-                    <h6 class="indicador" >Média mensal</h6>
-                    <h6 id="medM" ></h6>
-                </div>
-                <div class="little_box" >
-                    <h6 class="linha"></h6>
-                    <h6 class="indicador" >Acumulado</h6>
-                    <h6 id="acumulado" >JAN-21</h6>
+            </div>
+            <div class="relatory_box">
+                <img class="relatory" src="./imagens/capa_relatorio_modelo_2.png">
+                <div class="relatory_text">
+                    <h4>Relatório - OSPAM N° 02</h4>
+                    <h5>06/02/2023</h5>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iusto dolorem provident laudantium eveniet ipsa qui porro fuga possimus saepe recusandae doloremque, ea non incidunt illum unde laborum repudiandae consequatur.</h6>
                 </div>
             </div>
         </div>
@@ -61,8 +51,6 @@
     <footer>
         OPP
     </footer> 
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="CRIMES_MANAUS_2019-2021.js" ></script>
     <script src="crime.js" ></script> 
 </body>
 </html>
