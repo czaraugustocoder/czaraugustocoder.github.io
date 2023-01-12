@@ -30,22 +30,6 @@ let maximo = document.querySelector("#maximo");
 console.log(maximo);
 maximo.innerHTML = max_date;
 
-// find the min value
-let min_val = Math.min(...yValues);
-
-// find the index of min value
-let min_index = yValues.indexOf(min_val);
-
-console.log("Min value index is: " + min_index);
-
-let min_date = xValues[min_index];
-
-console.log(min_date);
-
-let minima = document.querySelector("#minima");
-console.log(minima);
-minima.innerHTML = min_date;
-
 
 // calculando a média e a soma 
 
@@ -104,6 +88,7 @@ function submit(escolhido) {
   console.log(valor);
   mainFunc(valor);
 }
+
 
 
 
