@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Android';
+    src: url('./pacote-projeto-d010/fontes/idroid.otf')
+    format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'bebinha';
+    src: url('./pacote-projeto-d010/fontes/BebasNeue-Regular.ttf')
+    format('opentype');
+    font-weight: normal;
+}
+
+/*
+CORES
+#c5ebd6
+#83e1ad
+#2fa866
+#1a5c37
+#063die
+*/
+
+/* Definindo variáveis na raiz do documento*/
+
+:root {
+    --cor0: #025fb1;
+    --cor1: #F2F2F2;
+
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-destaque: 'Android';
+    --fonte-beba: 'bebinha';
+}
+
+/* Configurações Globais */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(230, 230, 230);
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-color: white;
+    min-height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 2px rgb(58, 58, 58);
+    margin-bottom: 2px;
+}
+
+#logo {
+    width: 250px;
+    display: block;
+    margin-left: 10px;
+}
+
+nav {
+    margin-right: 10px;
+}
+
+#menu {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu a {
+    color:var(--cor0);
+    text-decoration: none;
+    font-family: var(--fonte-padrao);
+}
+
+#menu a:hover {
+    color: black;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #btn-mobile {
+        display: block;
+        border-style: none;
+        color:var(--cor0);
+        background-color: white;
+    }
+    
+    #btn-mobile:hover{
+        color: black;
+    }
+
+    #menu {
+        display: none;
+        line-height: 180%;
+        position: absolute;
+        width: 50%;
+        top: 70px;
+        right: 0px;
+        background-color: white;
+        height: calc(100vh - 70px);
+        z-index: 10000;
+    }
+
+    #nav-menu.active #menu {
+        display: block;
+    }
+
+    #menu a {
+        margin-left: 2px;
+        display: block;
+        padding: 1rem 0;
+        border-bottom-style: solid;
+    }
+
+}
+
+#content {
+    max-width: 925px;
+    min-width: 320px;
+    min-height: 720px;
+    box-shadow: 0px 0px 4px black;
+    background-color: white;
+    margin: auto;
+    padding-top: 20px;
+}
+
+h2 {
+    margin-left: 15px;
+}
+
+p {
+    max-width: 825px;
+    min-width: 320px;
+    margin: 15px;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--cor1);
+    color: black;
+    height: 40px;
+    box-shadow: 2px 0px 2px rgb(58, 58, 58);
+    padding-top: 8px;
+}
