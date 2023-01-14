@@ -42,13 +42,13 @@ CORES
 }
 
 body {
-    background-color: rgb(230, 230, 230);
+    background-color: white;
     font-family: var(--fonte-padrao);
 }
 
 header {
     background-color: white;
-    min-height: 95px;
+    min-height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,6 +94,7 @@ nav {
         border-style: none;
         color:var(--cor0);
         background-color: white;
+        cursor: pointer;
     }
     
     #btn-mobile:hover{
@@ -101,19 +102,24 @@ nav {
     }
 
     #menu {
-        display: none;
+        display: block;
         line-height: 180%;
         position: absolute;
-        width: 50%;
-        top: 70px;
+        width: 100%;
+        top: 90px;
         right: 0px;
         background-color: white;
-        height: calc(100vh - 70px);
+        height: 0px;
+        transition: .6s;
         z-index: 10000;
+        visibility: hidden;
+        overflow-y: hidden;
     }
 
     #nav-menu.active #menu {
-        display: block;
+        height: calc(100vh - 90px);
+        visibility: visible;
+        overflow-y: auto;
     }
 
     #menu a {
@@ -154,20 +160,20 @@ h4 {
 }
 
 #big_box {
-    background-color: rgb(230, 230, 230);
+    background-color: white;
     max-width: 875px;
     min-width: 320px;
     height: 692px;
-    margin: 10px auto 10px auto;
+    margin: 0px auto 0px auto;
     padding: 0px;
 }
 
 #box_aside {
-    margin: 6px auto 0px auto;
-    background-color: rgb(230, 230, 230);
+    margin: 0px auto 0px auto;
+    background-color: white;
     max-width: 875px;
     min-width: 320px;
-    height: 130px;
+    height: 110px;
     display: flex;
 }
 
@@ -184,7 +190,7 @@ h4 {
 
 .little_box {
     width: 286px;
-    height: 115px;
+    height: 95px;
     margin: 6px auto 6px auto;
     background-color: white;
     border-radius: 10px;
