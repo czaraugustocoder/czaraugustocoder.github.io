@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
+
+* {
+    margin: 0px;
+}
+
+header {
+    background-color: #5BAD5B;
+    margin-bottom: 10px;
+}
+
+#logotipo {
+    display: block;
+    margin: auto;
+    width: 300px;
+}
+
+nav {
+    display: block;
+    padding-left: 12px;
+    padding-bottom: 4px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Rosario', sans-serif;
+    font-weight: bold;
+    margin-left: 14px;
+}
+
+#box-content {
+    max-width: 835px;
+    min-width: 320px;
+    margin: auto;
+}
+
+#box-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#card {
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 2px #1f1f1f;
+}
+
+#card:hover {
+    box-shadow: 0px 0px 15px #3fe93f;
+}
+
+img {
+    display: block;
+    width: 100px;
+    margin: auto;
+}
+
+h6 {
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    background-color: #5BAD5B;
+    font-family: 'Rosario', sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(156, 156, 156);
+    margin-top: 10px;
+}
