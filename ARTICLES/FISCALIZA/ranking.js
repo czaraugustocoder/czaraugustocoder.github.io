@@ -14,21 +14,21 @@ console.log(rankingDataOrdered);
 
 let box = document.querySelector("#box-cards");
 
-for (let a = 10; a > 0; a--) {
+for (let a = 9; a >= 0; a--) {
     // imagem 
     img = document.createElement("img");
     img.src = rankingDataOrdered[a].urlFoto
     console.log(img);
     // nome do deputado
-    let name = document.createElement("h4");
+    let name = document.createElement("h2");
     name.innerHTML = rankingDataOrdered[a].nome;
     console.log(name);
     // partido 
-    let partido = document.createElement("h7");
+    let partido = document.createElement("h3");
     partido.innerHTML = rankingDataOrdered[a].siglaPartido;
     console.log(partido);
     // valor gasto
-    let valor = document.createElement("h3");
+    let valor = document.createElement("h1");
     valor.innerHTML = rankingDataOrdered[a].DespesasTotal;
     console.log(valor);
     // div texto 
@@ -44,6 +44,12 @@ for (let a = 10; a > 0; a--) {
     divCard.appendChild(img);
     divCard.appendChild(divTexto);
     console.log(divCard);
+    // div linha
+    let divLinha = document.createElement("div");
+    divLinha.setAttribute("id","divLinha");
     // adicionando à caixa de contúdo do html 
+    if (a != 9) {
+        box.insertAdjacentElement("afterbegin",divLinha);
+    }
     box.insertAdjacentElement("afterbegin",divCard);
 }
