@@ -1,4 +1,4 @@
-const rankingData = window.ranking;
+const rankingData = window.deputados;
 console.log(rankingData);
 
 const rankingDataOrdered = rankingData.sort((a, b) => {
@@ -14,10 +14,10 @@ console.log(rankingDataOrdered);
 
 let box = document.querySelector("#box-cards");
 
-for (let a = 9; a >= 0; a--) {
+for (let a = 7; a >= 0; a--) {
     // imagem 
     img = document.createElement("img");
-    img.src = rankingDataOrdered[a].urlFoto
+    img.src = rankingDataOrdered[a].urlFoto;
     console.log(img);
     // nome do deputado
     let name = document.createElement("h2");

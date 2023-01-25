@@ -29,11 +29,27 @@ nav a {
     margin-left: 14px;
 }
 
-#box-content {
-    max-width: 835px;
+#box-texto {
+    max-width: 800px;
+    min-width: 320px;
+    margin: 10px auto 25px auto;
+    padding: 0px 10px 0px 10px;
+}
+
+.title {
+    margin-bottom: 15px;
+}
+
+.texto {
+    margin-bottom: 10px;
+}
+
+#box-deputados {
+    max-width: 450px;
     min-width: 320px;
     margin: auto;
 }
+
 
 #box-cards {
     display: flex;

@@ -8,7 +8,7 @@ for (let a = 0; a < deputadosData.length; a++ ) {
     let name = document.createElement("h6");
     name.innerHTML = deputadosData[a].nome;
     img = document.createElement("img");
-    img.src = deputadosData[a].urlfoto;
+    img.src = deputadosData[a].urlFoto;
     let card = document.createElement("div");
     card.setAttribute("id","card");
     card.appendChild(img);
