@@ -48,7 +48,7 @@ for (let a = 7; a >= 0; a--) {
     let divLinha = document.createElement("div");
     divLinha.setAttribute("id","divLinha");
     // adicionando à caixa de contúdo do html 
-    if (a != 9) {
+    if (a != 7) {
         box.insertAdjacentElement("afterbegin",divLinha);
     }
     box.insertAdjacentElement("afterbegin",divCard);

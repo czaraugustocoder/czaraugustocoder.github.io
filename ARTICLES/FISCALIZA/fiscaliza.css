@@ -57,12 +57,12 @@ nav a {
     justify-content: space-around;
 }
 
-#card {
+.card {
     margin-bottom: 15px;
     box-shadow: 0px 0px 2px #1f1f1f;
 }
 
-#card:hover {
+.card:hover {
     box-shadow: 0px 0px 15px #3fe93f;
 }
 
