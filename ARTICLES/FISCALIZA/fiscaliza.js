@@ -46,7 +46,7 @@ function infoDep(id_dep){
     let uniques = [...new Set(despesas)];
     console.log(uniques);
     let total = 0;
-    let table = "";
+    let table = `<table><thead><tr><th>DESPESA</th><th>VALOR</th></tr></thead><tbody>`;
     for (let c = 0; c < uniques.length; c++){
         console.log(uniques[c]);
         let gastosByType = infoGastos.filter(gasto => gasto.despesa == uniques[c]);
@@ -58,23 +58,26 @@ function infoDep(id_dep){
         
         console.log(uniques[c],sum)
 
-        table += `${uniques[c]}: ${sum}<br>`
+        table += `<tr><td>${uniques[c]}</td><td>${sum}</td></tr>`
     }
 
-    console.log("total: ",total);
-    console.log(table);
+    table += `</tbody></table>`;
 
     let newPage = window.open("");
     newPage.document.write(
     `<html>
     <head>
+    <link rel="stylesheet" href="page_gastos.css">
     <title>${nameDep}</title>
     </head>
     <body>
-    <img src=${foto}>
+    <img id="perfil_image" src=${foto}>
     <h1>${nameDep}</h1>
     <h2>Detalhamento dos valores gastos</h2>
-    <div>${table}</div>
+    <div>
+    ${table}
+    <h4>Total: ${total}</h4>
+    </div>
     </body>
     </html>`
     );
