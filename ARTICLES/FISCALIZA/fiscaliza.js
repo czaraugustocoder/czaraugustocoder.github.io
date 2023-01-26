@@ -1,5 +1,7 @@
 const deputadosData = window.deputados;
+const deputadosGastos = window.gastos;
 console.log(deputadosData);
+console.log(deputadosGastos);
 
 function main(){
 let content_div = document.querySelector("#box-cards");
@@ -35,6 +37,33 @@ function infoDep(id_dep){
     console.log(info.nome);
     let nameDep = info.nome;
     let foto = info.urlFoto;
+    let infoGastos = deputadosGastos.filter(deputado => deputado.codigo == id_dep);
+    console.log(infoGastos);
+    let despesas = infoGastos.map(function (type) {
+        return type.despesa;
+    });
+    console.log(despesas); // ['John', 'Wayne', 'David']
+    let uniques = [...new Set(despesas)];
+    console.log(uniques);
+    let total = 0;
+    let table = "";
+    for (let c = 0; c < uniques.length; c++){
+        console.log(uniques[c]);
+        let gastosByType = infoGastos.filter(gasto => gasto.despesa == uniques[c]);
+        console.log(gastosByType);
+        let sum = gastosByType.reduce((accumulator, object) => {
+            return accumulator + object.valor;
+          }, 0);
+        total += sum;
+        
+        console.log(uniques[c],sum)
+
+        table += `${uniques[c]}: ${sum}<br>`
+    }
+
+    console.log("total: ",total);
+    console.log(table);
+
     let newPage = window.open("");
     newPage.document.write(
     `<html>
@@ -44,7 +73,8 @@ function infoDep(id_dep){
     <body>
     <img src=${foto}>
     <h1>${nameDep}</h1>
-    <a href="javascript:history.back()">Go Back</a>
+    <h2>Detalhamento dos valores gastos</h2>
+    <div>${table}</div>
     </body>
     </html>`
     );
