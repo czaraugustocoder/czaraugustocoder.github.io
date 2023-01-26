@@ -51,7 +51,7 @@ p {
 
 #foto_perfil {
     display: block;
-    width: 180px;
+    width: 120px;
 }
 
 h4 {
@@ -87,8 +87,8 @@ h4 {
 .fa {
     text-align: center;
     padding: 20px;
-    font-size: 40px;
-    width: 40px;
+    font-size: 25px;
+    width: 32px;
     text-decoration: none;
     border-radius: 50%;
 }
