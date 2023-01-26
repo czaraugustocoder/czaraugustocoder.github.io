@@ -40,6 +40,14 @@ nav a {
     margin-bottom: 15px;
 }
 
+ul {
+    margin-bottom: 10px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
 .texto {
     margin-bottom: 10px;
 }
