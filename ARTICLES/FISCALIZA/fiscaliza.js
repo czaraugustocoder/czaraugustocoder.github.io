@@ -37,6 +37,9 @@ function infoDep(id_dep){
     console.log(info.nome);
     let nameDep = info.nome;
     let foto = info.urlFoto;
+    let partido = info.siglaPartido;
+    let email = info.email;
+    let total_gasto = info.DespesasTotal;
     let infoGastos = deputadosGastos.filter(deputado => deputado.codigo == id_dep);
     console.log(infoGastos);
     let despesas = infoGastos.map(function (type) {
@@ -77,12 +80,18 @@ function infoDep(id_dep){
     <title>${nameDep}</title>
     </head>
     <body>
+    <div id="perfil_dep">
     <img id="perfil_image" src=${foto}>
-    <h1>${nameDep}</h1>
-    <h2>Detalhamento dos valores gastos</h2>
+        <div id="perfil_info">
+            <h1>${nameDep}</h1>
+            <h3>${partido}</h3>
+            <h3>${email}</h3>
+        </div>
+    </div>
     <div>
+    <h2>Total Gasto: ${total_gasto}</h2>
+    <h2>Detalhamento dos valores gastos</h2>
     ${table}
-    <h4>Total: ${total.toFixed(2)}</h4>
     </div>
     </body>
     </html>`
