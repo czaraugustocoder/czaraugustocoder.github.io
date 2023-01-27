@@ -45,20 +45,26 @@ function infoDep(id_dep){
     console.log(despesas); // ['John', 'Wayne', 'David']
     let uniques = [...new Set(despesas)];
     console.log(uniques);
+
     let total = 0;
-    let table = `<table><thead><tr><th>DESPESA</th><th>VALOR</th></tr></thead><tbody>`;
+
+    total = infoGastos.reduce((accumulator, object) => {
+        return accumulator + object.valor;
+      }, 0);
+
+    let table = `<table><thead><tr><th>DESPESA</th><th>VALOR</th><th>REPRESENTAÇÃO PERCENTUAL (%)</th></tr></thead><tbody>`;
     for (let c = 0; c < uniques.length; c++){
+        let porcentagem = 0;
         console.log(uniques[c]);
         let gastosByType = infoGastos.filter(gasto => gasto.despesa == uniques[c]);
         console.log(gastosByType);
         let sum = gastosByType.reduce((accumulator, object) => {
             return accumulator + object.valor;
           }, 0);
-        total += sum;
         
-        console.log(uniques[c],sum)
+        porcentagem = ((sum/total) * 100)
 
-        table += `<tr><td>${uniques[c]}</td><td>${sum}</td></tr>`
+        table += `<tr><td>${uniques[c]}</td><td>${sum.toFixed(2)}</td><td>${porcentagem.toFixed(2)}%</td></tr>`
     }
 
     table += `</tbody></table>`;
@@ -76,7 +82,7 @@ function infoDep(id_dep){
     <h2>Detalhamento dos valores gastos</h2>
     <div>
     ${table}
-    <h4>Total: ${total}</h4>
+    <h4>Total: ${total.toFixed(2)}</h4>
     </div>
     </body>
     </html>`
