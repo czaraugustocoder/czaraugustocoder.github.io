@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 #perfil_image {
     display: block;
     margin: auto;
@@ -7,10 +9,12 @@
 
 h1 {
     text-align: center;
+    font-family: 'Quicksand', sans-serif;
 }
 
 table {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
     border-collapse: collapse;
     max-width: 720px;
     margin: auto;
@@ -18,7 +22,7 @@ table {
 
 th {
     text-align: center;
-    background-color: #5BAD5B;
+    background-color: #2BA8D9;
     color: white;
     border: 1px solid #ddd;
     padding: 8px;

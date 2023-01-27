@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 * {
     margin: 0px;
 }
 
 header {
-    background-color: #5BAD5B;
+    background-color: #272A59;
     margin-bottom: 10px;
 }
 
@@ -24,12 +24,13 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     margin-left: 14px;
 }
 
 #box-content {
+    font-family: 'Quicksand', sans-serif;
     max-width: 800px;
     min-width: 320px;
     margin: auto;
@@ -37,12 +38,14 @@ nav a {
 }
 
 h1 {
+    color: #2BA8D9;
     margin-bottom: 20px;
 }
 
 p {
     text-align: justify;
     margin-bottom: 10px;
+    font-weight: 800;
 }
 
 #div_perfil {
@@ -96,6 +99,6 @@ h4 {
 footer {
     width: 100%;
     height: 50px;
-    background-color: rgb(156, 156, 156);
+    background-color: #37A686;
     margin-top: 10px;
 }
