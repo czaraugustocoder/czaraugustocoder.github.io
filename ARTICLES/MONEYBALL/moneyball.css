@@ -11,12 +11,44 @@ body {
 
 header {
     padding: 5px 0px 0px 0px;
-    background-color: white;
+    background-color: black;
     margin: 0px;
+}
+
+#linha-out {
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+    background-color: black;
+    margin: 0px auto 0px auto;
+    max-width: 800px;
+}
+
+#linha {
+    height: 1.8px;
+    background-color: white;
+    padding: 0px;
+    margin: 0px auto 0px auto;
 }
 
 h1 {
     text-align: center;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 9px;
+    margin-top: 2px;
+}
+
+p {
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
+
+h5 {
+    background-color: whitesmoke;
+    margin-bottom: 7px;
+    margin-top: 2px;
 }
 
 #menu {

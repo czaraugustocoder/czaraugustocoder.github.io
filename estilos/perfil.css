@@ -6,24 +6,38 @@
 
 body {
     margin: 0px;
-    background-color: #F0F1F2;
-    min-height: 100vh;
+    background-color: white;
 }
 
 header {
     padding: 5px 0px 0px 0px;
-    background-color: white;
+    background-color: black;
     margin: 0px;
 }
 
 h1 {
     text-align: center;
+    color: white;
 }
 
+#linha-out {
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+    background-color: black;
+    margin: 0px auto 0px auto;
+    max-width: 800px;
+}
+
+#linha {
+    height: 1.8px;
+    background-color: white;
+    padding: 0px;
+    margin: 0px auto 0px auto;
+}
 
 #menu {
     background-color: #000000;
-    margin: 0px;
+    margin-right: 10px;
     padding: 10px 0px 10px 0px;
     text-align: right;
 }
@@ -32,7 +46,7 @@ header > #menu  > a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    margin-left: 2px;
+    margin-left: 8px;
     padding: 0px 6px 0px 0px;
     background-color: #000000;
 }
@@ -42,25 +56,37 @@ header > #menu  > a:hover{
     text-decoration: underline;
 }
 
+
+
 main {
     background-color: white;
-    margin: 5px auto 5px auto;
+    margin: auto;
     padding: 15px;
-    min-height: 450px;
     min-width: 320px;
     max-width: 800px;
-    border-radius: 2px;
-    box-shadow: 0px 0px 2px rgb(54, 54, 54);
 
+}
+
+h2 {
+    margin-bottom: 9px;
+    margin-top: 2px;
+}
+
+p {
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
+
+h5 {
+    background-color: whitesmoke;
+    margin-bottom: 7px;
+    margin-top: 2px;
 }
 
 #perfil {
     display: block;
     margin: auto;
     border-radius: 50%;
-    border-style: solid;
-    border-width: 0.08px;
-    border-bottom: #575757;
     width: 100%;
 }
 
@@ -87,8 +113,8 @@ footer {
     align-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 10px;
-    bottom: 0;
     color: white;
-    flex-shrink: 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
