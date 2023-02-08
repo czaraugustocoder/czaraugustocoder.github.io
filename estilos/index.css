@@ -9,6 +9,8 @@ body {
     background-color: white;
 }
 
+/* Header */
+
 header {
     padding: 5px 0px 0px 0px;
     background-color: black;
@@ -55,6 +57,8 @@ header > #menu  > a {
 header > #menu  > a:hover{
     text-decoration: underline;
 }
+
+/* Header */
 
 h2 {
     margin-bottom: 9px;
