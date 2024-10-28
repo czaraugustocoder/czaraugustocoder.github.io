@@ -1,55 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9Z4N8S273"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-H9Z4N8S273');
-    </script>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/index.css">
-    <title>Blog</title>
+    <title>Site - Cesar Augusto</title>
+    <!-- Importando Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #000; /* Cor preta para os ícones */
+            font-size: 1.5em;
+        }
+        .about-me, .projects {
+            width: 60%;
+            max-width: 800px;
+            margin-top: 20px;
+            text-align: left; /* Alinhamento à esquerda */
+        }
+        .about-me p, .projects p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .project{
+            background-color: whitesmoke;
+            margin: 20px auto 20px auto;
+            padding: 10px;
+            box-shadow: 0px 0px 4px rgb(36, 36, 36);
+            min-width: 320px;
+            max-width: 640px;
+        }
+
+        .project a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1em;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>CESAR AUGUSTO</h1>
-        <div id="linha-out" >
-            <div id="linha" ></div>
+
+    <h1>Cesar Augusto</h1>
+
+    <div class="social-links">
+        <a href="https://github.com/czaraugustocoder" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/cesar-augusto-258b92185/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/czaraugusto_/profilecard/?igsh=MTl6Mm1id245YnV4NA==" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <section class="about-me">
+        <h2>Sobre Mim</h2>
+        <p>Programador com experiência em Python e SQL, focado no desenvolvimento de soluções eficazes para análise 
+        de dados e automação de processos. Em Python, crio scripts para RPA, realizo análises de dados, desenvolvo 
+        APIs e construo aplicações web utilizando frameworks como Flask ou Streamlit.</p>
+        <p>Também sou apaixonado por cinema, com o gosto especial pelo gênero crime/policial e faço material a respeito em meu instagram.</p>
+    </section>
+
+    <section class="projects">
+        <h2>Projetos</h2>
+        <div class="project">
+            <a href="https://ceapcmmpainel-sonrko3eqcenwwmwvsmn7m.streamlit.app/" target="_blank"><h2>TRANSPARÊNCIA EM DASHBOARDS - CÂMARA MUNICIPAL DE MANAUS</h2></a>
+            <p>Projeto desenvolvido com técnicas de web scrapping para raspagem de dados do portal da transparência da Câmara Municipal de Manaus, tratamento de dados utilizando a linguagem python publicação dos resultados com streamlit</p>
         </div>
-        <nav id="menu">
-            <a href="./index.html">Blog</a>
-            <a href="./projects.html">Projetos</a>
-            <a href="./perfil.html">Sobre mim</a>
-        </nav>
-    </header>
-    <main>
-        <div>
-            <a href="./ARTICLES/CHART/chart.html"><h2>Uma breve demontração da biblioteca plotly.js</h2></a>
-            <a href="#"><h5>Javascript</h5></a>
-            <h5>18/12/2022</h5>
-            <p>Eu estava procurando uma boa biblioteca para trabalhar com dataviz no JavaScrip, e me deparei com essa coisa incrível que é o plotly.js</p>
+        <div class="project">
+            <a href="https://jqcdzqmznvewbbmp6lt6yl.streamlit.app/" target="_blank"><h2>R.I.D.B - Relatório Interativo da Desigualdade Brasileira</h2></a>
+            <p>Projeto para apresentação dos dados de desigualdade brasileira com o indíce de gini</p>
         </div>
-        <div>
-            <a href="./ARTICLES/MONEYBALL/moneyball.html"><h2>Moneyball e Statsmodels: Aplicação do Modelo de Regressão Linear em dados do Baseball</h2></a>
-            <a href="#"><h5>Matemática - Python</h5></a>
-            <h5>13/12/2022</h5>
-            <p>Este texto é uma transcrição/tradução/resumo do curso Moneyball: The Power of Sports Analytics, oferecido gratuitamente pelo Instituto de Tecnologia de Massa Massachusetts (MIT)...</p>
+        <div class="project">
+            <a href="https://game-labirynt.onrender.com/cadastrar" target="_blank"><h2>Game labyrinth</h2></a>
+            <p>Projeto desenvolvido com o framework Flask onde pratiquei minhas habilidades em desenvolvimento back end</p>
         </div>
-        <div>
-            <a href="./ARTICLES/ESPERANCA-MATEMATICA/casino.html"><h2>Esperança Matemática - Como saber se um jogo é justo</h2></a>
-            <a href="#"><h5>Matemática</h5></a>
-            <h5>08/12/2022</h5>
-            <p>Tem uma cena no filme Casino, um dos melhores filmes da carreira do mestre Scorsese, em que Sam Rothstein...</p>
-        </div>
-    </main>
-    <footer>
-        &#169 Cesar Augusto. All Rights Reserved
-    </footer>  
+    </section>
+
 </body>
 </html>
