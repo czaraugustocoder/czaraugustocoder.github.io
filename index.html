@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site - Cesar Augusto</title>
-    <!-- Importando Font Awesome para os ícones -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9Z4N8S273"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-H9Z4N8S273');
+    </script>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,46 +29,109 @@
             align-items: center;
             color: #333;
         }
+
         h1 {
             font-size: 2.5em;
             margin-top: 20px;
         }
+
         .social-links {
             display: flex;
             gap: 15px;
             margin-top: 10px;
         }
+
         .social-links a {
             text-decoration: none;
-            color: #000; /* Cor preta para os ícones */
+            color: #000;
             font-size: 1.5em;
         }
-        .about-me, .projects {
+
+        /* =========================
+           SOBRE MIM
+        ========================= */
+        .about-me {
             width: 60%;
             max-width: 800px;
-            margin-top: 20px;
-            text-align: left; /* Alinhamento à esquerda */
+            margin-top: 30px;
+            text-align: left;
         }
-        .about-me p, .projects p {
+
+        .about-me p {
             font-size: 1em;
             line-height: 1.6;
         }
-        .project{
-            background-color: whitesmoke;
-            margin: 20px auto 20px auto;
-            padding: 10px;
-            box-shadow: 0px 0px 4px rgb(36, 36, 36);
-            min-width: 320px;
-            max-width: 640px;
+
+        /* =========================
+           CARD MVI — TUDO DENTRO
+        ========================= */
+        .editorial-card {
+            width: 60%;
+            max-width: 800px;
+            margin: 40px 0;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 16px;
         }
 
-        .project a {
-            text-decoration: none;
-            color: #000;
-            font-size: 1em;
+        .editorial-header {
+            display: flex;
+            align-items: stretch; /* força mesma altura do conteúdo */
+        }
+
+        .editorial-line {
+            width: 3px;              /* linha fina, editorial */
+            background-color: #000;
+            margin-right: 12px;
+        }
+
+        .editorial-text h2 {
+            margin: 0;
+            font-size: 1.4em;
+        }
+
+        .editorial-text span {
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .editorial-image {
+            margin-top: 10px;
+        }
+
+        .editorial-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .section-title {
+            width: 60%;
+            max-width: 800px;
+            margin: 40px 0 10px 0;
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: 1.6em;
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+        @media (max-width: 768px) {
+            .about-me,
+            .editorial-card {
+                width: 90%;
+            }
+
+            .editorial-text h2 {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <h1>Cesar Augusto</h1>
@@ -69,30 +144,50 @@
 
     <section class="about-me">
         <h2>Sobre Mim</h2>
-        <p>Programador com experiência em Python e SQL, focado no desenvolvimento de soluções eficazes para análise 
-        de dados e automação de processos. Com Python crio scripts para RPA, realizo análises de dados, desenvolvo 
-        APIs e construo aplicações web utilizando frameworks como Flask ou Streamlit. Com SQL, crio, leio, atualizo e excluo dados de SGBDs relacionais.</p>
-        <p>Também sou apaixonado por cinema, com o gosto especial pelo gênero crime/policial e faço material a respeito em meu instagram.</p>
+        <p>
+            Programador com experiência em Python e SQL, focado no desenvolvimento de soluções eficazes para análise 
+            de dados e automação de processos. Com Python crio scripts para RPA, realizo análises de dados, desenvolvo 
+            APIs e construo aplicações web utilizando frameworks como Flask ou Streamlit.
+        </p>
     </section>
 
-    <section class="projects">
-        <h2>Projetos</h2>
-        <div class="project">
-            <a href="https://ceapcmmpainel-sonrko3eqcenwwmwvsmn7m.streamlit.app/" target="_blank"><h2>TRANSPARÊNCIA EM DASHBOARDS - CÂMARA MUNICIPAL DE MANAUS</h2></a>
-            <p>Projeto desenvolvido com técnicas de web scrapping para raspagem de dados do portal da transparência da Câmara Municipal de Manaus, tratamento de dados utilizando a linguagem python e publicação dos resultados com streamlit</p>
+    <section class="section-title">
+    <h2>Gráficos e Análises</h2>
+    </section>
+
+    <!-- CARD MVI (TUDO DENTRO DA DIV) -->
+    <section class="editorial-card">
+
+        <div class="editorial-header">
+            <div class="editorial-line"></div>
+
+            <div class="editorial-text">
+                <h2>13 anos de dados de violência do Brasil</h2>
+                <span>Janeiro/2026</span>
+            </div>
         </div>
-        <div class="project">
-            <a href="https://demografiamanauscenso2022-hnwmcpkhhg9wrwat7trkfm.streamlit.app/" target="_blank"><h2>Dados demográficos da cidade de Manaus - CENSO 2022 (IBGE)</h2></a>
-            <p>Projeto para apresentação dos dados do CENSO 2022, utilizando a biblioteca folium para construção de mapa coroplético</p>
+
+        <div class="editorial-image">
+            <img src="mvi.png" alt="Gráfico de Mortes Violentas Intencionais no Brasil">
         </div>
-        <div class="project">
-            <a href="https://jqcdzqmznvewbbmp6lt6yl.streamlit.app/" target="_blank"><h2>R.I.D.B - Relatório Interativo da Desigualdade Brasileira</h2></a>
-            <p>Projeto para apresentação dos dados de desigualdade brasileira com o indíce de gini</p>
+
+    </section>
+
+    <section class="editorial-card">
+
+        <div class="editorial-header">
+            <div class="editorial-line"></div>
+
+            <div class="editorial-text">
+                <h2>13 anos de Indíce de Gini</h2>
+                <span>Dezembro/2025</span>
+            </div>
         </div>
-        <div class="project">
-            <a href="https://take-note-app.onrender.com/" target="_blank"><h2>TAKE NOTE</h2></a>
-            <p>CRUD com streamlit onde pratiquei minhas habilidades em desenvolvimento back end</p>
+
+        <div class="editorial-image">
+            <img src="GINI.png" alt="Gráfico de Gini">
         </div>
+
     </section>
 
 </body>
