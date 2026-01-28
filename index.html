@@ -11,7 +11,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-0WT37SH918');
     </script>
 
@@ -48,7 +47,7 @@
         }
 
         /* =========================
-           SOBRE MIM
+           SOBRE MIM / SEÇÕES DE TEXTO
         ========================= */
         .about-me {
             width: 60%;
@@ -57,13 +56,18 @@
             text-align: left;
         }
 
+        .about-me h2 {
+            margin-bottom: 10px;
+            font-size: 1.6em;
+        }
+
         .about-me p {
             font-size: 1em;
             line-height: 1.6;
         }
 
         /* =========================
-           CARD MVI — TUDO DENTRO
+           CARD EDITORIAL
         ========================= */
         .editorial-card {
             width: 60%;
@@ -76,11 +80,11 @@
 
         .editorial-header {
             display: flex;
-            align-items: stretch; /* força mesma altura do conteúdo */
+            align-items: stretch;
         }
 
         .editorial-line {
-            width: 3px;              /* linha fina, editorial */
+            width: 3px;
             background-color: #000;
             margin-right: 12px;
         }
@@ -105,17 +109,6 @@
             display: block;
         }
 
-        .section-title {
-            width: 60%;
-            max-width: 800px;
-            margin: 40px 0 10px 0;
-        }
-
-        .section-title h2 {
-            margin: 0;
-            font-size: 1.6em;
-        }
-
         /* =========================
            RESPONSIVO
         ========================= */
@@ -137,11 +130,18 @@
     <h1>Cesar Augusto</h1>
 
     <div class="social-links">
-        <a href="https://github.com/czaraugustocoder" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/cesar-augusto-258b92185/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/czaraugusto_/profilecard/?igsh=MTl6Mm1id245YnV4NA==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/czaraugustocoder" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/cesar-augusto-258b92185/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/czaraugusto_/profilecard/?igsh=MTl6Mm1id245YnV4NA==" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
     </div>
 
+    <!-- SOBRE MIM -->
     <section class="about-me">
         <h2>Sobre Mim</h2>
         <p>
@@ -151,16 +151,21 @@
         </p>
     </section>
 
-    <section class="section-title">
-    <h2>Gráficos e Análises</h2>
+    <!-- GRÁFICOS E ANÁLISES -->
+    <section class="about-me">
+        <h2>Gráficos e Análises</h2>
+        <p>
+            Sou um grande admirador do trabalho de infografia e gráficos de jornais como 
+            <strong>Nexo</strong> e <strong>The Economist</strong>, o que me motivou a realizar 
+            análises próprias sobre diversos temas com gráficos em estilo editorial próprio, 
+            desenvolvidos totalmente com a biblioteca <strong>Matplotlib</strong> do Python.
+        </p>
     </section>
 
-    <!-- CARD MVI (TUDO DENTRO DA DIV) -->
+    <!-- CARD MVI -->
     <section class="editorial-card">
-
         <div class="editorial-header">
             <div class="editorial-line"></div>
-
             <div class="editorial-text">
                 <h2>13 anos de dados de violência do Brasil</h2>
                 <span>Janeiro/2026</span>
@@ -170,14 +175,12 @@
         <div class="editorial-image">
             <img src="MVI.png" alt="Gráfico de Mortes Violentas Intencionais no Brasil">
         </div>
-
     </section>
 
+    <!-- CARD GINI -->
     <section class="editorial-card">
-
         <div class="editorial-header">
             <div class="editorial-line"></div>
-
             <div class="editorial-text">
                 <h2>13 anos de Índice de Gini</h2>
                 <span>Dezembro/2025</span>
@@ -185,9 +188,8 @@
         </div>
 
         <div class="editorial-image">
-            <img src="GINI.png" alt="Gráfico de Gini">
+            <img src="GINI.png" alt="Gráfico de Índice de Gini">
         </div>
-
     </section>
 
 </body>
