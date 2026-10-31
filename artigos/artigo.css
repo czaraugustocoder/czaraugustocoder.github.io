@@ -1,0 +1,85 @@
+/* Estilo compartilhado das páginas de artigo — Notas de Cesar */
+:root {
+  --papel: #F0EFEB;
+  --papel-2: #E7E5DF;
+  --tinta: #121212;
+  --tinta-2: #3D3D3D;
+  --cinza: #75736E;
+  --linha: #CFCCC4;
+  --vermelho: #E3120B;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--papel); color: var(--tinta);
+  font-family: var(--sans); -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+.faixa { height: 6px; background: var(--vermelho); }
+.barra {
+  max-width: 1180px; margin: 0 auto; padding: 14px 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 3px solid var(--tinta);
+}
+.barra .marca { font-family: var(--serif); font-weight: 700; font-size: 26px; text-decoration: none; }
+.barra nav { display: flex; gap: 22px; font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+.barra nav a { text-decoration: none; }
+.barra nav a:hover, .barra .marca:hover { color: var(--vermelho); }
+
+article { padding: 0 24px 72px; }
+.cabeca, .corpo, .autor, .voltar { max-width: 680px; margin-left: auto; margin-right: auto; }
+
+.cabeca { padding-top: 44px; }
+.editoria { color: var(--vermelho); font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; }
+h1 {
+  font-family: var(--serif); font-weight: 700; letter-spacing: -.02em;
+  font-size: clamp(38px, 6vw, 60px); line-height: 1.04; margin: 10px 0 14px;
+}
+.linha-fina { font-family: var(--serif); font-size: clamp(20px, 2.6vw, 25px); line-height: 1.35; color: var(--tinta-2); margin: 0 0 22px; }
+.assinatura { font-size: 13.5px; color: var(--cinza); padding: 12px 0; border-top: 1px solid var(--linha); }
+.assinatura b { color: var(--tinta); }
+
+.capa { max-width: 960px; margin: 10px auto 36px; }
+.capa img { width: 100%; }
+.capa.estreita { max-width: 680px; }
+.capa figcaption { font-size: 12.5px; color: var(--cinza); padding-top: 8px; }
+
+.corpo p {
+  font-family: var(--serif); font-size: 20px; line-height: 1.62; margin: 0 0 22px; color: #1d1d1d;
+}
+.corpo > p:first-child::first-letter {
+  float: left; font-weight: 700; font-size: 74px; line-height: .84; padding: 7px 10px 0 0; color: var(--vermelho);
+}
+.corpo h2 {
+  font-family: var(--serif); font-size: 28px; line-height: 1.2; margin: 44px 0 16px;
+  padding-top: 14px; border-top: 1px solid var(--tinta);
+}
+.spoiler { background: var(--papel-2); border-top: 3px solid var(--vermelho); padding: 18px 22px 2px; margin: 32px 0; }
+.spoiler strong { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--vermelho); margin-bottom: 10px; }
+.spoiler p { font-size: 18px; }
+blockquote {
+  margin: 36px 0; padding: 0; border: 0;
+  font-family: var(--serif); font-style: italic; font-size: clamp(25px, 3.4vw, 31px); line-height: 1.3;
+  color: var(--vermelho);
+}
+blockquote::before { content: ""; display: block; width: 44px; height: 4px; background: var(--vermelho); margin-bottom: 14px; }
+.fim::after { content: " ■"; color: var(--vermelho); font-size: .8em; }
+
+.autor {
+  display: flex; gap: 16px; align-items: center; margin-top: 44px; padding-top: 18px;
+  border-top: 3px solid var(--tinta); font-size: 15px; line-height: 1.5; color: var(--tinta-2);
+}
+.autor img { width: 64px; height: 64px; object-fit: cover; border-radius: 50%; flex: none; }
+.voltar { display: block; margin-top: 30px; font-size: 14px; font-weight: 600; text-decoration: none; }
+.voltar:hover { color: var(--vermelho); }
+
+@media (max-width: 640px) {
+  .barra { padding: 12px 16px; }
+  .barra .marca { font-size: 21px; }
+  .barra nav { gap: 12px; font-size: 11px; }
+  article { padding: 0 16px 56px; }
+  .corpo p { font-size: 18.5px; }
+}

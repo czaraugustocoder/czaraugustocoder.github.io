@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notas de Cesar — gráficos e análises</title>
-  <meta name="description" content="Gráficos e análises de Cesar Augusto sobre economia, educação e sociedade brasileira, feitos em Python.">
+  <meta name="description" content="Gráficos e análises de Cesar Augusto sobre economia, educação e sociedade brasileira, e ensaios filosóficos tendo o cinema como ponto de partida.">
 
   <meta property="og:title" content="Notas de Cesar">
-  <meta property="og:description" content="Gráficos e análises sobre economia, educação e sociedade brasileira.">
+  <meta property="og:description" content="Gráficos e análises sobre economia, educação e sociedade brasileira, e ensaios filosóficos tendo o cinema como ponto de partida.">
   <meta property="og:image" content="https://cesaraugustoandrade.com/RENDA_PERCENTIL.png">
   <meta property="og:type" content="website">
 
@@ -163,6 +163,26 @@
     .card .meta { margin-top: 10px; }
     .card[hidden] { display: none; }
 
+    /* ---------- Artigos ---------- */
+    .artigos { display: grid; gap: 0; }
+    .artigo {
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 32px;
+      align-items: center; padding: 22px 0; border-top: 1px solid var(--tinta);
+      text-decoration: none; color: inherit;
+    }
+    .artigo:first-child { border-top: 0; padding-top: 0; }
+    .artigo + .artigo { border-top-color: var(--linha); }
+    .artigo .capa { aspect-ratio: 2 / 1; overflow: hidden; background: #111; }
+    .artigo .capa img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; transition: transform .4s; }
+    .artigo:hover .capa img { transform: scale(1.03); }
+    .artigo h3 {
+      font-family: var(--serif); font-weight: 700; font-size: clamp(28px, 3.2vw, 40px);
+      line-height: 1.08; letter-spacing: -.015em; margin: 8px 0 12px;
+    }
+    .artigo:hover h3 { color: var(--vermelho); }
+    .artigo .linha { font-family: var(--serif); font-size: 20px; line-height: 1.4; color: var(--tinta-2); margin: 0 0 14px; }
+    .artigo .ler { font-size: 13px; font-weight: 600; margin-left: 10px; color: var(--tinta); }
+
     /* ---------- Sobre ---------- */
     .sobre {
       display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 48px;
@@ -234,6 +254,7 @@
       .destaque { grid-template-columns: 1fr; gap: 26px; }
       .sobre { grid-template-columns: 200px minmax(0, 1fr); gap: 30px; padding: 30px; }
       .vis { grid-template-columns: 1fr; }
+      .artigo { grid-template-columns: 1fr; gap: 16px; }
       .vis .img img { max-height: none; width: 100%; }
       .vis .txt { border-left: 0; border-top: 1px solid var(--linha); }
     }
@@ -241,6 +262,8 @@
       .wrap { padding: 0 16px; }
       .grade { grid-template-columns: 1fr; }
       .topo .data { display: none; }
+      .masthead br { display: none; }
+      .masthead p { font-size: 16px; line-height: 1.45; }
       nav.principal { gap: 18px; font-size: 12px; }
       .sobre { grid-template-columns: 1fr; padding: 24px 18px; }
       .sobre img { max-width: 220px; }
@@ -266,12 +289,13 @@
 
     <div class="masthead">
       <h1><a href="./">Notas de Cesar</a></h1>
-      <p>Gráficos e análises sobre economia, educação e sociedade brasileira</p>
+      <p>Gráficos e análises sobre economia, educação e sociedade brasileira,<br>e ensaios filosóficos tendo o cinema como ponto de partida</p>
     </div>
 
     <nav class="principal" aria-label="Seções">
       <a href="#destaque">Destaque</a>
       <a href="#graficos">Gráficos</a>
+      <a href="#artigos">Artigos</a>
       <a href="#sobre">Sobre</a>
     </nav>
   </header>
@@ -287,6 +311,10 @@
     <div class="filtros" id="filtros" role="group" aria-label="Filtrar por editoria"></div>
     <section class="grade" id="grade"></section>
 
+    <!-- ARTIGOS: preenchido a partir de artigos.js -->
+    <div class="secao-titulo" id="artigos">Artigos</div>
+    <section class="artigos" id="lista-artigos"></section>
+
     <!-- SOBRE -->
     <div class="secao-titulo" id="sobre">Sobre o autor</div>
     <section class="sobre">
@@ -297,14 +325,18 @@
         <span class="editoria">Quem escreve</span>
         <h2>Olá, eu sou Cesar Augusto</h2>
         <p>
-          Apaixonado por dados e programação. Tenho sólida experiência na manipulação e tratamento
-          de grandes volumes de dados, atuando com Python e SQL na automatização de processos,
-          otimização de consultas e desenvolvimento de relatórios interativos que apoiam a tomada
-          de decisão gerencial.
+          Apaixonado por dados e programação, e amante do cinema e da filosofia. No trabalho, tenho
+          sólida experiência na manipulação e tratamento de grandes volumes de dados, atuando com Python
+          e SQL na automatização de processos, otimização de consultas e desenvolvimento de relatórios
+          interativos que apoiam a tomada de decisão gerencial.
         </p>
         <p>
           Sou graduado em Ciências Econômicas pela Universidade do Estado do Amazonas (UEA),
           pós-graduado em Desenvolvimento Back End e estou concluindo um MBA em Business Intelligence.
+        </p>
+        <p>
+          Estas notas reúnem o que me move: gráficos e análises sobre economia, educação e sociedade
+          brasileira, e ensaios filosóficos tendo o cinema como ponto de partida.
         </p>
 
         <div class="fatos">
@@ -357,6 +389,7 @@
   </dialog>
 
   <script src="graficos.js"></script>
+  <script src="artigos.js"></script>
   <script>
     (function () {
       const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -394,6 +427,18 @@
           </div>
           <div class="meta">${meta(g)}</div>
         </article>`).join("");
+
+      // Artigos
+      document.getElementById("lista-artigos").innerHTML = ARTIGOS.map(a => `
+        <a class="artigo" href="artigos/${esc(a.id)}.html">
+          <div class="capa"><img src="${esc(a.capa)}" alt="${esc(a.alt)}" loading="lazy"${a.foco ? ` style="object-position:${esc(a.foco)}"` : ""}></div>
+          <div>
+            <span class="editoria">${esc(a.editoria)}</span>
+            <h3>${esc(a.titulo)}</h3>
+            <p class="linha">${esc(a.linha)}</p>
+            <span class="meta"><b>${esc(a.data)}</b> · Por Cesar Augusto</span><span class="ler">Ler artigo →</span>
+          </div>
+        </a>`).join("");
 
       // Filtros por editoria (gerados a partir dos dados)
       const editorias = ["Todos", ...new Set(GRAFICOS.map(g => g.editoria))];
