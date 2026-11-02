@@ -10,6 +10,10 @@
   <meta property="og:description" content="Gráficos e análises sobre economia, educação e sociedade brasileira, e ensaios filosóficos tendo o cinema como ponto de partida.">
   <meta property="og:image" content="https://cesaraugustoandrade.com/RENDA_PERCENTIL.png">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cesaraugustoandrade.com/">
+  <meta property="og:site_name" content="Notas de Cesar">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WT37SH918"></script>
@@ -378,8 +382,8 @@
         <div class="meta" id="vis-meta"></div>
         <div class="acoes">
           <a id="vis-baixar" href="" download>Baixar imagem</a>
-          <button id="vis-link">Copiar link</button>
         </div>
+        <div id="vis-compartilhar"></div>
         <div class="navvis">
           <button id="vis-ant">← Anterior</button>
           <button id="vis-prox">Próximo →</button>
@@ -389,6 +393,7 @@
   </dialog>
 
   <script src="graficos.js"></script>
+  <script src="compartilhar.js"></script>
   <script src="artigos.js"></script>
   <script>
     (function () {
@@ -466,6 +471,10 @@
         $("vis-linha").textContent = g.linha;
         $("vis-meta").innerHTML = meta(g);
         $("vis-baixar").href = g.imagem;
+        // Link de compartilhamento: g/<id>/ traz a prévia do gráfico para WhatsApp, Facebook etc.
+        Compartilhar.montar($("vis-compartilhar"), {
+          url: `${Compartilhar.SITE}/g/${g.id}/`, titulo: g.titulo, texto: g.linha
+        });
         if (location.hash !== "#" + g.id) history.replaceState(null, "", "#" + g.id);
         if (typeof gtag === "function") gtag("event", "ver_grafico", { grafico: g.id });
       }
@@ -497,11 +506,6 @@
       $("vis-fechar").onclick = fechar;
       $("vis-ant").onclick = () => mostrar(atual - 1);
       $("vis-prox").onclick = () => mostrar(atual + 1);
-      $("vis-link").onclick = async () => {
-        try { await navigator.clipboard.writeText(location.href); $("vis-link").textContent = "Link copiado"; }
-        catch { $("vis-link").textContent = location.href; }
-        setTimeout(() => $("vis-link").textContent = "Copiar link", 1800);
-      };
 
       // Abrir direto por link compartilhado (ex.: site/#pisa)
       if (location.hash) abrir(decodeURIComponent(location.hash.slice(1)));

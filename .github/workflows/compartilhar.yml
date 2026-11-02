@@ -1,0 +1,42 @@
+name: Páginas de compartilhamento
+
+# Sempre que graficos.js ou uma imagem muda, recria g/<id>/ (prévias para
+# WhatsApp, Facebook, Messenger, Threads e Instagram) e faz o commit sozinho.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "graficos.js"
+      - "*.png"
+      - "*.jpg"
+      - "compartilhar/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: compartilhar
+  cancel-in-progress: false
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - run: python compartilhar/gerar.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add g/
+          if git diff --cached --quiet; then
+            echo "Nada a atualizar"
+          else
+            git commit -m "Atualiza páginas de compartilhamento"
+            git push
+          fi
