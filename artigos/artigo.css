@@ -41,6 +41,8 @@ h1 {
 .linha-fina { font-family: var(--serif); font-size: clamp(20px, 2.6vw, 25px); line-height: 1.35; color: var(--tinta-2); margin: 0 0 22px; }
 .assinatura { font-size: 13.5px; color: var(--cinza); padding: 12px 0; border-top: 1px solid var(--linha); }
 .assinatura b { color: var(--tinta); }
+.assinatura a { color: inherit; text-decoration: none; }
+.assinatura a:hover { color: var(--vermelho); }
 
 .capa { max-width: 960px; margin: 10px auto 36px; }
 .capa img { width: 100%; }

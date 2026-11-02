@@ -9,6 +9,8 @@ Para cada item de graficos.js cria:
     g/<id>/capa.jpg    → o gráfico num cartão 1200x630 (formato que o
                           Facebook/WhatsApp exibem sem cortar), leve (< 150 KB).
 
+Também recria sitemap.xml (página inicial + artigos/*.html) para o Google.
+
 Roda sozinho no GitHub Actions a cada push que mexe em graficos.js ou nas
 imagens (.github/workflows/compartilhar.yml). Para rodar à mão:
     python compartilhar/gerar.py          (requer Node e Pillow)
@@ -65,6 +67,7 @@ MODELO = """<!DOCTYPE html>
   <title>{titulo} — Notas de Cesar</title>
   <meta name="description" content="{linha}">
   <link rel="canonical" href="{url}">
+  <meta name="robots" content="noindex, follow">
 
   <meta property="og:site_name" content="Notas de Cesar">
   <meta property="og:locale" content="pt_BR">
@@ -98,7 +101,32 @@ MODELO = """<!DOCTYPE html>
 """
 
 
+def gerar_sitemap():
+    """sitemap.xml com a página inicial e cada artigo (data = último commit)."""
+    def data_commit(caminho):
+        r = subprocess.run(["git", "log", "-1", "--format=%cs", "--", caminho],
+                           cwd=RAIZ, capture_output=True, text=True)
+        return r.stdout.strip()
+
+    urls = [(f"{SITE}/", data_commit("index.html"), "1.0")]
+    for art in sorted((RAIZ / "artigos").glob("*.html")):
+        urls.append((f"{SITE}/artigos/{art.name}", data_commit(f"artigos/{art.name}"), "0.8"))
+    linhas = ['<?xml version="1.0" encoding="UTF-8"?>',
+              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for loc, mod, prio in urls:
+        linhas.append("  <url>")
+        linhas.append(f"    <loc>{loc}</loc>")
+        if mod:
+            linhas.append(f"    <lastmod>{mod}</lastmod>")
+        linhas.append(f"    <priority>{prio}</priority>")
+        linhas.append("  </url>")
+    linhas.append("</urlset>")
+    (RAIZ / "sitemap.xml").write_text("\n".join(linhas) + "\n", encoding="utf-8")
+    print("ok sitemap.xml", len(urls), "URLs")
+
+
 def main():
+    gerar_sitemap()
     graficos = ler_graficos()
     SAIDA.mkdir(exist_ok=True)
     ids = set()

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /compartilhar/
+
+Sitemap: https://cesaraugustoandrade.com/sitemap.xml
