@@ -9,6 +9,15 @@
 
 const ARTIGOS = [
   {
+    id: "a-estrada",
+    editoria: "Cultura · Cinema",
+    titulo: "A Estrada",
+    linha: "Se Thomas Hobbes fosse vivo, usaria A Estrada como peça argumentativa em Leviatã",
+    data: "Novembro/2026",
+    capa: "artigos/img/a-estrada-capa.jpg",
+    alt: "Viggo Mortensen e Kodi Smit-McPhee em A Estrada"
+  },
+  {
     id: "onde-os-fracos-nao-tem-vez",
     editoria: "Cultura · Cinema",
     titulo: "Onde os Fracos Não Têm Vez",
