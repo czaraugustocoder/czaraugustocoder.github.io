@@ -20,6 +20,16 @@
 
 const GRAFICOS = [
   {
+    id: "selic-inflacao",
+    editoria: "Economia",
+    titulo: "Selic ficou 11,2 pontos acima da inflação, recorde desde 2012",
+    linha: "Em fevereiro de 2026, a distância entre a meta Selic e o IPCA de 12 meses chegou ao maior nível da série. No outro extremo, em julho de 2021, os juros ficaram 4,7 pontos abaixo da inflação.",
+    data: "Novembro/2026",
+    fonte: "Banco Central do Brasil — SGS",
+    imagem: "SELIC_JURO_REAL.png",
+    alt: "Gráfico da meta Selic e do IPCA acumulado em 12 meses, de janeiro de 2012 a setembro de 2026, destacando a maior folga (+11,2 p.p. em fev/2026) e a maior defasagem (−4,7 p.p. em jul/2021)"
+  },
+  {
     id: "renda-percentil",
     editoria: "Economia",
     titulo: "Com R$ 4.500 por mês, você já está entre os 20% mais ricos do Brasil",
