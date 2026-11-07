@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bastardos Inglórios e o Teorema de Bayes — Notas de Cesar</title>
+  <meta name="description" content="Como o major Hellstrom podia ter tanta certeza a partir de um simples gesto de mão? O teorema de Bayes coloca a desconfiança dele em números.">
+
+  <meta name="author" content="Cesar Augusto Andrade Ferreira">
+  <link rel="canonical" href="https://cesaraugustoandrade.com/artigos/bastardos-inglorios-bayes.html">
+  <meta property="article:author" content="Cesar Augusto Andrade Ferreira">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Bastardos Inglórios e o Teorema de Bayes",
+    "description": "Como o major Hellstrom podia ter tanta certeza a partir de um simples gesto de mão? O teorema de Bayes coloca a desconfiança dele em números.",
+    "image": "https://cesaraugustoandrade.com/artigos/img/bastardos-inglorios-capa.jpg",
+    "datePublished": "2026-11",
+    "inLanguage": "pt-BR",
+    "mainEntityOfPage": "https://cesaraugustoandrade.com/artigos/bastardos-inglorios-bayes.html",
+    "author": {
+      "@type": "Person",
+      "@id": "https://cesaraugustoandrade.com/#cesar",
+      "name": "Cesar Augusto Andrade Ferreira",
+      "url": "https://cesaraugustoandrade.com/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://cesaraugustoandrade.com/#cesar",
+      "name": "Cesar Augusto Andrade Ferreira"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://cesaraugustoandrade.com/#site",
+      "name": "Notas de Cesar"
+    }
+  }
+  </script>
+
+  <meta property="og:title" content="Bastardos Inglórios e o Teorema de Bayes">
+  <meta property="og:description" content="Como o major Hellstrom podia ter tanta certeza a partir de um simples gesto de mão? O teorema de Bayes coloca a desconfiança dele em números.">
+  <meta property="og:image" content="https://cesaraugustoandrade.com/artigos/img/bastardos-inglorios-capa.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cesaraugustoandrade.com/artigos/bastardos-inglorios-bayes.html">
+  <meta property="og:site_name" content="Notas de Cesar">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WT37SH918"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0WT37SH918');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="artigo.css">
+  <script src="../compartilhar.js" defer></script>
+</head>
+<body>
+
+  <div class="faixa"></div>
+  <header class="barra">
+    <a class="marca" href="../">Notas de Cesar</a>
+    <nav>
+      <a href="../#graficos">Gráficos</a>
+      <a href="../#artigos">Artigos</a>
+      <a href="../#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <article>
+    <header class="cabeca">
+      <span class="editoria">Cultura · Cinema</span>
+      <h1>Bastardos Inglórios e o Teorema de Bayes</h1>
+      <p class="linha-fina">Como o major Hellstrom podia ter tanta certeza a partir de um simples gesto de mão? A estatística ajuda a responder</p>
+      <div class="assinatura">Por <b><a href="../#sobre" rel="author">Cesar Augusto Andrade Ferreira</a></b> · Novembro/2026</div>
+    </header>
+
+    <figure class="capa">
+      <img src="img/bastardos-inglorios-capa.jpg" alt="Michael Fassbender e August Diehl sentados à mesa da taverna em Bastardos Inglórios">
+      <figcaption>Michael Fassbender (tenente Archie Hicox) e August Diehl (major Dieter Hellstrom) em <i>Bastardos Inglórios</i> (2009), de Quentin Tarantino</figcaption>
+    </figure>
+
+    <div class="corpo">
+      <p>
+        Para mim, um dos momentos mais geniais do cinema está em <i>Bastardos Inglórios</i>, de Quentin Tarantino.
+        É a cena da taverna, em que o tenente britânico Archie Hicox (Michael Fassbender), disfarçado de oficial
+        alemão, se entrega ao major Hellstrom (August Diehl) com um simples gesto de mão e compromete a Operação
+        Kino. Depois de ver o filme, fiquei com uma pergunta na cabeça. Como o major podia estar tão certo de que
+        estava diante de um impostor apenas por causa de um gesto?
+      </p>
+      <p>
+        Recentemente descobri que existe uma forma de expressar em números o que se passava na cabeça do major.
+        Ela vem de um teorema famoso da estatística, o teorema de Bayes.
+      </p>
+
+      <aside class="spoiler">
+        <strong>A cena, para quem não lembra</strong>
+        <p>
+          Hicox, o sargento Stiglitz e o cabo Wicki vão a uma taverna no porão encontrar a atriz e agente dupla
+          Bridget von Hammersmark. O lugar está cheio de soldados alemães, e o major Hellstrom, da Gestapo, se
+          junta à mesa. O sotaque estranho de Hicox já tinha chamado atenção. A suspeita só se confirma quando ele
+          pede mais três copos de uísque e mostra o número três com os dedos indicador, médio e anelar, como
+          fazem os britânicos. Um alemão faria o três com o polegar, o indicador e o médio.
+        </p>
+      </aside>
+
+      <h2>O que é o teorema de Bayes</h2>
+      <p>
+        Nós, seres humanos, estamos sempre teorizando e tirando conclusões sobre o mundo à nossa volta. Quando
+        nossas teorias encontram novas evidências, a favor ou contra elas, nosso grau de confiança sobe ou desce.
+        Segundo o matemático Jordan Ellenberg, autor de <i>O poder do pensamento matemático</i>, o teorema de Bayes
+        é justamente uma forma de atualizar nossas crenças sobre as coisas do mundo à luz de novas observações,
+        só que por meio de uma expressão matemática.
+      </p>
+      <p>
+        O teorema leva o nome do reverendo inglês Thomas Bayes, que viveu no século XVIII, e trabalha com dois
+        conceitos centrais. A <b>probabilidade a priori</b> é o grau de crença em algo antes de qualquer evidência.
+        A <b>probabilidade a posteriori</b> é o grau de crença depois de vermos uma evidência relacionada ao
+        problema. O teorema é a ponte entre uma e outra.
+      </p>
+      <p>
+        Na mesma cena, os personagens jogam um jogo de cartas em que cada um tem um nome colado na testa e
+        precisa adivinhar quem é. Se fosse para escolher o nome na testa do major, eu escolheria Bayes.
+      </p>
+
+      <h2>A conta do major</h2>
+      <p>
+        Vamos aplicar o teorema à cena. Digamos que, no início da conversa, o major já desconfiasse de Hicox por
+        causa do sotaque, e que sua crença de que o tenente era um impostor estivesse em 70%. Essa é a nossa
+        probabilidade a priori.
+      </p>
+      <p>
+        Então vem a evidência, o três feito com os dedos errados. Para atualizar a crença, o teorema pergunta duas
+        coisas. Qual a chance de alguém fazer esse gesto se for de fato um impostor britânico? E qual a chance de
+        um alemão de verdade fazer o mesmo gesto? Vamos supor que um britânico sob pressão escorregue nesse
+        detalhe em 45% das vezes, e que um alemão faça o três desse jeito em apenas 5% das vezes. Ou seja, o
+        gesto é nove vezes mais provável vindo de um impostor.
+      </p>
+
+      <div class="conta">
+        <div class="formula">
+          P(I | G) =
+          <span class="frac"><span>P(G | I) × P(I)</span><span>P(G | I) × P(I) + P(G | A) × P(A)</span></span>
+        </div>
+        <table>
+          <tr><td>P(I), crença a priori de que Hicox é impostor</td><td>70%</td></tr>
+          <tr><td>P(A), crença a priori de que ele é alemão</td><td>30%</td></tr>
+          <tr><td>P(G | I), chance do gesto vindo de um impostor</td><td>45%</td></tr>
+          <tr><td>P(G | A), chance do gesto vindo de um alemão</td><td>5%</td></tr>
+          <tr><td>P(I | G) = 0,315 ÷ (0,315 + 0,015)</td><td>95,45%</td></tr>
+        </table>
+      </div>
+
+      <p>
+        Depois do gesto, a crença do major de que Hicox é um impostor salta para 95,45%. Essa é a nossa
+        probabilidade a posteriori.
+      </p>
+      <p>
+        Existe um jeito ainda mais intuitivo de chegar ao mesmo número. Antes do gesto, a aposta do major era de
+        7 contra 3 a favor do impostor. Como o gesto é nove vezes mais provável vindo de um britânico, basta
+        multiplicar o 7 por nove, e a aposta passa a ser de 63 contra 3, ou 21 contra 1. Em 22 casos como esse,
+        o major estaria certo em 21, o que dá os mesmos 95,45%. É isso que o teorema de Bayes faz. Ele transforma
+        em conta a atualização das nossas crenças.
+      </p>
+      <p>
+        Os números, claro, são ilustrativos. O major não fez conta nenhuma, pelo menos não no papel. Mas o
+        raciocínio dele é exatamente esse. O sotaque criou a suspeita, e o gesto, muito mais comum entre
+        britânicos do que entre alemães, a transformou em quase certeza. Por isso a frieza dele na cena faz tanto
+        sentido.
+      </p>
+
+      <blockquote>Nem o reverendo Bayes imaginou que alguém usaria um filme do Tarantino para explicar o seu teorema.</blockquote>
+
+      <p class="fim">
+        No fim das contas, estamos sempre fazendo inferências sobre o mundo e nem imaginamos que alguém, em algum
+        lugar, montou um teorema para expressar a mudança dos nossos apriorismos. Quando um detalhe pequeno muda
+        muito o que pensamos, é porque ele é bem mais provável em uma explicação do que na outra. Hicox sabia
+        falar alemão e conhecia a cultura do país, mas bastou a mão para o major Hellstrom atualizar suas crenças.
+      </p>
+    </div>
+
+    <footer class="autor">
+      <img src="../cesar.jpg" alt="Foto de Cesar Augusto Andrade Ferreira">
+      <div>
+        <b>Cesar Augusto Andrade Ferreira</b> é economista pela UEA, analista de dados e amante do cinema e da filosofia.
+        Escreve sobre economia, educação, sociedade e cinema em <a href="../">Notas de Cesar</a>.
+      </div>
+    </footer>
+
+    <a class="voltar" href="../#artigos">← Todos os artigos</a>
+  </article>
+
+</body>
+</html>

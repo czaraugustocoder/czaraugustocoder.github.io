@@ -85,3 +85,15 @@ blockquote::before { content: ""; display: block; width: 44px; height: 4px; back
   article { padding: 0 16px 56px; }
   .corpo p { font-size: 18.5px; }
 }
+
+/* Caixa de conta (fórmulas e cálculos dentro do texto) */
+.conta { background: var(--papel-2); border-left: 3px solid var(--tinta); padding: 16px 22px; margin: 28px 0; font-family: var(--sans); font-size: 16px; line-height: 1.6; color: var(--tinta-2); }
+.conta .formula { font-family: var(--serif); font-size: 21px; color: var(--tinta); text-align: center; margin: 6px 0 12px; white-space: nowrap; overflow-x: auto; }
+.conta .frac { display: inline-block; vertical-align: middle; text-align: center; }
+.conta .frac > span { display: block; padding: 0 4px; }
+.conta .frac > span + span { border-top: 1px solid var(--tinta); }
+.conta table { border-collapse: collapse; width: 100%; font-size: 15px; }
+.conta td { padding: 5px 4px; border-bottom: 1px solid var(--linha); }
+.conta td:last-child { text-align: right; font-weight: 600; color: var(--tinta); white-space: nowrap; }
+.conta tr:last-child td { border-bottom: 0; }
+@media (max-width: 640px) { .conta { padding: 14px 14px; } .conta .formula { font-size: 13.5px; } }

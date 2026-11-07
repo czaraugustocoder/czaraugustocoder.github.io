@@ -9,6 +9,15 @@
 
 const ARTIGOS = [
   {
+    id: "bastardos-inglorios-bayes",
+    editoria: "Cultura · Cinema",
+    titulo: "Bastardos Inglórios e o Teorema de Bayes",
+    linha: "Como o major Hellstrom podia ter tanta certeza a partir de um simples gesto de mão? A estatística ajuda a responder",
+    data: "Novembro/2026",
+    capa: "artigos/img/bastardos-inglorios-capa.jpg",
+    alt: "Michael Fassbender e August Diehl à mesa da taverna em Bastardos Inglórios"
+  },
+  {
     id: "a-estrada",
     editoria: "Cultura · Cinema",
     titulo: "A Estrada",
