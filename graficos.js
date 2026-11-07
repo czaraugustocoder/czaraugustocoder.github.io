@@ -8,7 +8,7 @@
 
    Campos:
      id       → identificador curto, sem espaço (vira link: site/#id)
-     editoria → Economia | Educação | Segurança | Mercados | Cultura
+     editoria → Economia | Educação | Segurança | Mercados | Cultura | Política
                 (pode criar novas; o filtro se atualiza sozinho)
      titulo   → manchete do card
      linha    → frase de apoio (o "standfirst" da Economist)
@@ -19,6 +19,16 @@
    ===================================================================== */
 
 const GRAFICOS = [
+  {
+    id: "midterms-eua",
+    editoria: "Política",
+    titulo: "2026 dá aos democratas a sua maior bancada desde 1994",
+    linha: "Mesmo com 21 cadeiras ainda a apurar, os democratas já somam 308 assentos no Congresso dos EUA e superam o recorde de 282, de 2006, de novo sob um presidente republicano.",
+    data: "Novembro/2026",
+    fonte: "Congresso dos EUA; The Associated Press (apuração parcial de 2026)",
+    imagem: "MIDTERMS_EUA.png",
+    alt: "Gráfico das cadeiras de democratas e republicanos no Congresso dos EUA (Câmara + Senado) após cada eleição de meio de mandato, 1994 a 2026, com a apuração parcial de 2026 mostrando 308 democratas e 206 republicanos"
+  },
   {
     id: "selic-inflacao",
     editoria: "Economia",
