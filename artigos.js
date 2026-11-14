@@ -10,7 +10,7 @@
 const ARTIGOS = [
   {
     id: "matematica-dos-jogos-de-azar",
-    editoria: "Cultura · Cinema",
+    editoria: "Cultura · Cinema · Matemática",
     titulo: "A Matemática dos Jogos de Azar",
     linha: "Ace Rothstein diz que o cassino sempre ganha. A estatística mostra que não é só uma frase de efeito",
     data: "Novembro/2026",
