@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Matemática dos Jogos de Azar — Notas de Cesar</title>
+  <meta name="description" content="Em Cassino, de Scorsese, Ace Rothstein diz que o cassino sempre ganha. A esperança matemática e a lei dos grandes números mostram que ele tem razão.">
+
+  <meta name="author" content="Cesar Augusto Andrade Ferreira">
+  <link rel="canonical" href="https://cesaraugustoandrade.com/artigos/matematica-dos-jogos-de-azar.html">
+  <meta property="article:author" content="Cesar Augusto Andrade Ferreira">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "A Matemática dos Jogos de Azar",
+    "description": "Em Cassino, de Scorsese, Ace Rothstein diz que o cassino sempre ganha. A esperança matemática e a lei dos grandes números mostram que ele tem razão.",
+    "image": "https://cesaraugustoandrade.com/artigos/img/matematica-dos-jogos-de-azar-capa.jpg",
+    "datePublished": "2026-11",
+    "inLanguage": "pt-BR",
+    "mainEntityOfPage": "https://cesaraugustoandrade.com/artigos/matematica-dos-jogos-de-azar.html",
+    "author": {
+      "@type": "Person",
+      "@id": "https://cesaraugustoandrade.com/#cesar",
+      "name": "Cesar Augusto Andrade Ferreira",
+      "url": "https://cesaraugustoandrade.com/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://cesaraugustoandrade.com/#cesar",
+      "name": "Cesar Augusto Andrade Ferreira"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://cesaraugustoandrade.com/#site",
+      "name": "Notas de Cesar"
+    }
+  }
+  </script>
+
+  <meta property="og:title" content="A Matemática dos Jogos de Azar">
+  <meta property="og:description" content="Em Cassino, de Scorsese, Ace Rothstein diz que o cassino sempre ganha. A esperança matemática e a lei dos grandes números mostram que ele tem razão.">
+  <meta property="og:image" content="https://cesaraugustoandrade.com/artigos/img/matematica-dos-jogos-de-azar-capa.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cesaraugustoandrade.com/artigos/matematica-dos-jogos-de-azar.html">
+  <meta property="og:site_name" content="Notas de Cesar">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WT37SH918"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0WT37SH918');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="artigo.css">
+  <script src="../compartilhar.js" defer></script>
+</head>
+<body>
+
+  <div class="faixa"></div>
+  <header class="barra">
+    <a class="marca" href="../">Notas de Cesar</a>
+    <nav>
+      <a href="../#graficos">Gráficos</a>
+      <a href="../#artigos">Artigos</a>
+      <a href="../#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <article>
+    <header class="cabeca">
+      <span class="editoria">Cultura · Cinema</span>
+      <h1>A Matemática dos Jogos de Azar</h1>
+      <p class="linha-fina">Ace Rothstein diz que o cassino sempre ganha. A estatística mostra que não é só uma frase de efeito</p>
+      <div class="assinatura">Por <b><a href="../#sobre" rel="author">Cesar Augusto Andrade Ferreira</a></b> · Novembro/2026</div>
+    </header>
+
+    <figure class="capa">
+      <img src="img/matematica-dos-jogos-de-azar-capa.jpg" alt="Robert De Niro de terno escuro e braços cruzados no salão de um cassino em Cassino">
+      <figcaption>Robert De Niro (Sam "Ace" Rothstein) em <i>Cassino</i> (1995), de Martin Scorsese</figcaption>
+    </figure>
+
+    <div class="corpo">
+      <p>
+        Tem uma cena em <i>Cassino</i>, um dos melhores filmes de Martin Scorsese, em que Sam "Ace" Rothstein
+        (Robert De Niro) afirma que o cassino sempre ganha e que os jogadores não têm a menor chance. Será que
+        essa frase tem fundamento ou é apenas uma boa frase de efeito?
+      </p>
+      <p>
+        Para entender como os cassinos ganham dinheiro com os jogos de azar, é preciso entender dois conceitos
+        da estatística, a <b>esperança matemática</b> (ou valor esperado) e a <b>lei dos grandes números</b>.
+      </p>
+
+      <h2>Esperança matemática</h2>
+      <p>
+        A grosso modo, a esperança matemática é a soma dos produtos entre a probabilidade de cada resultado e
+        o valor associado a ele. Pensemos num exemplo. Imagine que você está apostando em corridas de cavalo.
+        Seu cavalo tem 60% de chance de ganhar e, caso ganhe, você leva 100 reais para casa. Caso perca, não
+        leva nada.
+      </p>
+
+      <div class="conta">
+        <div class="formula">E(X) = p₁ × x₁ + p₂ × x₂ + … + pₙ × xₙ</div>
+        <table>
+          <tr><td>Cavalo vence (60%) e você recebe R$ 100</td><td>0,6 × 100 = 60</td></tr>
+          <tr><td>Cavalo perde (40%) e você recebe R$ 0</td><td>0,4 × 0 = 0</td></tr>
+          <tr><td>Valor esperado da aposta</td><td>R$ 60</td></tr>
+        </table>
+      </div>
+
+      <p>
+        O valor esperado não é o valor que você espera ganhar numa aposta. Numa corrida você leva 100 ou leva
+        zero, nunca 60. Ele é o quanto você ganha <i>em média</i> se jogar muitas vezes.
+      </p>
+
+      <h2>A lei dos grandes números</h2>
+      <p>
+        A lei dos grandes números é um teorema que nos diz que, quanto maior o número de repetições de um
+        experimento, mais a média dos resultados se aproxima do valor esperado. Em poucas tentativas a sorte
+        manda. Em muitas, quem manda é a matemática.
+      </p>
+      <p>
+        Pense novamente na corrida de cavalos, mas agora você precisa pagar 20 reais para participar. Se fizer
+        100 apostas desse tipo e ganhar 60% delas, você recebe 60 × 100 = 6.000 reais. Só que pagou 20 reais
+        em cada uma das 100 apostas, um custo de 2.000 reais, e seu lucro na verdade é de 4.000 reais. Dá para
+        simplificar tudo isso. O valor esperado é 60 e a entrada custa 20, então cada aposta rende em média 40
+        reais líquidos. Quanto mais você jogar, mais o seu resultado médio fica perto desses 40.
+      </p>
+      <p>
+        É claro que nenhuma casa de apostas ofereceria um jogo assim. Esse é um jogo de valor esperado positivo
+        para o apostador, e a lei dos grandes números trabalharia a favor dele. Nos cassinos, a conta é montada
+        ao contrário.
+      </p>
+
+      <h2>A roleta</h2>
+      <p>
+        Na roleta europeia há 37 casas, numeradas de 0 a 36. Dezoito são vermelhas, dezoito são pretas e uma,
+        o zero, é verde. Quem aposta 10 reais no vermelho dobra o dinheiro se a bola cair numa casa vermelha e
+        perde tudo nos outros casos. Parece um cara ou coroa, mas o zero desequilibra a moeda.
+      </p>
+
+      <div class="conta">
+        <div class="formula">
+          E(X) = <span class="frac"><span>18</span><span>37</span></span> × (+10) +
+          <span class="frac"><span>19</span><span>37</span></span> × (−10)
+        </div>
+        <table>
+          <tr><td>Chance de ganhar (bola no vermelho)</td><td>48,65%</td></tr>
+          <tr><td>Chance de perder (preto ou zero)</td><td>51,35%</td></tr>
+          <tr><td>Valor esperado de cada aposta de R$ 10</td><td>−R$ 0,27</td></tr>
+          <tr><td>Vantagem da casa (1 ÷ 37)</td><td>2,70%</td></tr>
+        </table>
+      </div>
+
+      <p>
+        Cada aposta de 10 reais custa, em média, 27 centavos ao jogador. Parece pouco, e é justamente por
+        parecer pouco que funciona. Na roleta americana, que tem o zero e o duplo zero, a vantagem da casa sobe
+        para 5,26%. Todos os jogos de um cassino, da roleta às máquinas caça-níqueis, são desenhados para ter
+        valor esperado negativo para quem aposta.
+      </p>
+
+      <h2>Por que o cassino nunca perde</h2>
+      <p>
+        Aqui a lei dos grandes números entra em cena. Um jogador que faz poucas apostas ainda está no território
+        da sorte, e pode muito bem sair do cassino com lucro. O problema é que, a cada nova rodada, o resultado
+        dele se aproxima um pouco mais dos −2,70%. A tabela abaixo mostra a chance de alguém que aposta sempre
+        10 reais no vermelho terminar a noite no lucro.
+      </p>
+
+      <div class="conta">
+        <table>
+          <tr><td><b>Número de apostas</b></td><td>Chance de sair no lucro</td></tr>
+          <tr><td>10</td><td>34,4%</td></tr>
+          <tr><td>100</td><td>35,5%</td></tr>
+          <tr><td>1.000</td><td>18,8%</td></tr>
+          <tr><td>10.000</td><td>0,33%</td></tr>
+          <tr><td>1.000.000</td><td>praticamente zero</td></tr>
+        </table>
+      </div>
+
+      <p>
+        O cassino, por sua vez, não é um jogador. Ele está do outro lado de milhões de apostas todos os dias.
+        Num milhão de apostas de 10 reais, o lucro esperado da casa é de 270 mil reais, e a chance de ela
+        terminar no prejuízo é tão pequena que não faz sentido escrevê-la. Para o jogador, cada rodada é uma
+        aventura. Para o cassino, é uma linha numa planilha cujo total ele já conhece de antemão.
+      </p>
+      <p>
+        Por isso a frase de Ace precisa de um pequeno ajuste para ficar matematicamente perfeita. O cassino não
+        ganha todas as apostas, e perde muitas delas todas as noites. O que ele ganha, sempre, é a soma de
+        todas elas.
+      </p>
+
+      <blockquote>A sorte pertence ao jogador por uma noite. A média pertence ao cassino para sempre.</blockquote>
+
+      <p class="fim">
+        Os jogos de azar têm valor esperado negativo e, pela lei dos grandes números, quanto mais se joga, mais o
+        resultado converge para essa média. Os jogadores tendem a perder dinheiro no longo prazo, e o cassino,
+        que vive no longo prazo, sempre ganha. Matematicamente, Ace Rothstein está certo.
+      </p>
+    </div>
+
+    <footer class="autor">
+      <img src="../cesar.jpg" alt="Foto de Cesar Augusto Andrade Ferreira">
+      <div>
+        <b>Cesar Augusto Andrade Ferreira</b> é economista pela UEA, analista de dados e amante do cinema e da filosofia.
+        Escreve sobre economia, educação, sociedade e cinema em <a href="../">Notas de Cesar</a>.
+      </div>
+    </footer>
+
+    <a class="voltar" href="../#artigos">← Todos os artigos</a>
+  </article>
+
+</body>
+</html>

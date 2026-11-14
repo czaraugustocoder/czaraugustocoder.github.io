@@ -9,6 +9,16 @@
 
 const ARTIGOS = [
   {
+    id: "matematica-dos-jogos-de-azar",
+    editoria: "Cultura · Cinema",
+    titulo: "A Matemática dos Jogos de Azar",
+    linha: "Ace Rothstein diz que o cassino sempre ganha. A estatística mostra que não é só uma frase de efeito",
+    data: "Novembro/2026",
+    capa: "artigos/img/matematica-dos-jogos-de-azar-capa.jpg",
+    alt: "Robert De Niro de braços cruzados no salão de um cassino em Cassino",
+    foco: "center 25%"
+  },
+  {
     id: "bastardos-inglorios-bayes",
     editoria: "Cultura · Cinema",
     titulo: "Bastardos Inglórios e o Teorema de Bayes",
