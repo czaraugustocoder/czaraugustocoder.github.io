@@ -47,7 +47,7 @@ const ARTIGOS = [
   },
   {
     id: "taxi-driver",
-    editoria: "Cultura · Cinema",
+    editoria: "Cultura · Cinema · Sociedade",
     titulo: "50 anos de ‘Taxi Driver’",
     linha: "Onde estaria Travis Bickle na era das redes sociais?",
     data: "Fevereiro/2026",
