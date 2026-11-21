@@ -29,7 +29,7 @@ const ARTIGOS = [
   },
   {
     id: "a-estrada",
-    editoria: "Cultura · Cinema",
+    editoria: "Cultura · Cinema · Filosofia",
     titulo: "A Estrada",
     linha: "Se Thomas Hobbes fosse vivo, usaria A Estrada como peça argumentativa em Leviatã",
     data: "Novembro/2026",
@@ -38,7 +38,7 @@ const ARTIGOS = [
   },
   {
     id: "onde-os-fracos-nao-tem-vez",
-    editoria: "Cultura · Cinema",
+    editoria: "Cultura · Cinema · Filosofia",
     titulo: "Onde os Fracos Não Têm Vez",
     linha: "O niilismo em um clássico moderno dos irmãos Coen",
     data: "Março/2026",
